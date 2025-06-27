@@ -1,0 +1,24 @@
+//standard conversion of binary to decimal (not optimal) good for short integers! 
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) 
+    {
+        System.out.println("Try programiz.pro");
+        
+        int binary = 101010110;
+        int sum = 0;
+        int j = 0;
+        while(binary!=0)
+        {
+           int pow =(int) Math.pow(2, j);
+           int rem = binary%10;
+           binary = binary/10;
+           sum = sum+rem*pow;
+           j++;
+        }
+        System.out.println(sum);
+    }
+}
