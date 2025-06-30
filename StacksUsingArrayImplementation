@@ -1,0 +1,65 @@
+
+class Main {
+    public static void main(String[] args)
+    {
+        System.out.println("Trying stacks using arrays");
+        stacks st = new stacks();
+        st.push(4);
+        st.push(45);
+        st.push(44);
+        st.pop();
+        System.out.println(st.peekortop());
+        
+        
+    }
+}
+    
+    class stacks
+    {
+        int[] st = new int[10];
+      //  int size= 0;
+        int top = -1;
+        
+      
+      public void push(int x)
+      {
+          if(top>=9)
+          System.out.println("The stack is full");
+          else 
+          {
+              top= top+1;
+              st[top]=x;
+             // size++;
+          }
+      }
+      public int peekortop()
+      {
+          if(top==-1)
+          {
+          System.out.println("the stack is empty");
+          return -1;
+          }
+          else
+          {
+              return st[top];
+          }
+      }
+      
+      public void pop()
+      {
+          if(top==-1)
+          {
+              System.out.println("the stack is empty");
+              
+          }
+          else
+          {
+            top = top-1;
+          }
+      }
+      
+      public int size()
+      {
+          return top+1;
+      }
+}
